@@ -47,11 +47,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2      &kp N3       &kp N4               &kp N5  &tog 1                                                             &mo 3      &kp N6  &kp N7               &kp N8       &kp N9      &kp N0    &kp MINUS
-&kp TAB    &kp Q      &lt 1 W     &kp E        &lt 1 R              &kp T   &none                                                              &none      &kp Y   &lt 1 U              &kp I        &lt 1 O     &kp P     &kp BSLH
-&kp ESC    &kp A      &hm LALT S  &hm LCTRL D  &hm LEFT_GUI F       &kp G   &none     &kp LCTRL       &kp LALT      &kp LGUI   &kp RCTRL       &none      &kp H   &hm RGUI J           &hm RCTRL K  &hm RALT L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X       &kp C        &hm LA(LS(LCTRL)) V  &kp B                             &kp HOME      &kp PG_UP                             &kp N   &hm LA(LS(LCTRL)) M  &kp COMMA    &kp DOT     &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS    &kp LEFT     &kp RIGHT                    &kp BSPC  &hm LSFT SPACE  &kp END       &kp PG_DN  &hm LSFT SPACE  &kp ENTER          &kp DOWN             &kp UP       &kp LBKT    &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2      &kp N3       &kp N4               &kp N5  &tog 1                                                                          &mo 3      &kp N6  &kp N7               &kp N8       &kp N9      &kp N0    &kp MINUS
+&kp TAB    &kp Q      &lt 1 W     &kp E        &lt 1 R              &kp T   &kp GRAVE                                                                       &kp EQUAL  &kp Y   &lt 1 U              &kp I        &lt 1 O     &kp P     &kp BSLH
+&kp ESC    &kp A      &hm LALT S  &hm LCTRL D  &hm LEFT_GUI F       &kp G   &kp MINUS  &kp LCTRL             &kp LALT      &kp LGUI   &kp RCTRL             &none      &kp H   &hm RGUI J           &hm RCTRL K  &hm RALT L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X       &kp C        &hm LA(LS(LCTRL)) V  &kp B                                    &kp HOME      &kp PG_UP                                   &kp N   &hm LA(LS(LCTRL)) M  &kp COMMA    &kp DOT     &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS    &kp LEFT     &kp RIGHT                    &kp BSPC   &hm LEFT_SHIFT SPACE  &kp TAB       &kp PG_DN  &hm LEFT_SHIFT SPACE  &kp ENTER          &kp DOWN             &kp UP       &kp LBKT    &kp RBKT  &mo 2
             >;
         };
 
