@@ -8,16 +8,30 @@
     behaviors {
         #include "macros.dtsi"
 
-        hm: homerow_mods {
+        hmL: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <200>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
+        };
+
+        hmR: hmR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
         };
     };
 
@@ -47,11 +61,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2      &kp N3       &kp N4               &kp N5  &tog 1                                                                          &mo 3      &kp N6  &kp N7               &kp N8       &kp N9      &kp N0    &kp MINUS
-&kp TAB    &kp Q      &lt 1 W     &kp E        &lt 1 R              &kp T   &kp GRAVE                                                                       &kp EQUAL  &kp Y   &lt 1 U              &kp I        &lt 1 O     &kp P     &kp BSLH
-&kp ESC    &kp A      &hm LALT S  &hm LCTRL D  &hm LEFT_GUI F       &kp G   &kp MINUS  &kp LCTRL             &kp LALT      &kp LGUI   &kp RCTRL             &none      &kp H   &hm RGUI J           &hm RCTRL K  &hm RALT L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X       &kp C        &hm LA(LS(LCTRL)) V  &kp B                                    &kp HOME      &kp PG_UP                                   &kp N   &hm LA(LS(LCTRL)) M  &kp COMMA    &kp DOT     &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS    &kp LEFT     &kp RIGHT                    &kp BSPC   &hm LEFT_SHIFT SPACE  &kp TAB       &kp PG_DN  &hm LEFT_SHIFT SPACE  &kp ENTER          &kp DOWN             &kp UP       &kp LBKT    &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2       &kp N3        &kp N4                &kp N5  &tog 1                                                                            &mo 3      &kp N6  &kp N7                &kp N8        &kp N9       &kp N0    &kp MINUS
+&kp TAB    &kp Q      &lt 1 W      &kp E         &lt 1 R               &kp T   &kp GRAVE                                                                         &kp EQUAL  &kp Y   &lt 1 U               &kp I         &lt 1 O      &kp P     &kp BSLH
+&kp ESC    &kp A      &hmL LALT S  &hmL LCTRL D  &hmL LEFT_GUI F       &kp G   &kp MINUS  &kp LCTRL              &kp LALT      &kp LGUI   &kp RCTRL              &none      &kp H   &hmR RGUI J           &hmR RCTRL K  &hmR RALT L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X        &kp C         &hmL LA(LS(LCTRL)) V  &kp B                                     &kp HOME      &kp PG_UP                                    &kp N   &hmR LA(LS(LCTRL)) M  &kp COMMA     &kp DOT      &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS     &kp LEFT      &kp RIGHT                     &kp BSPC   &hmL LEFT_SHIFT SPACE  &kp TAB       &kp PG_DN  &hmR LEFT_SHIFT SPACE  &kp ENTER          &kp DOWN              &kp UP        &kp LBKT     &kp RBKT  &mo 2
             >;
         };
 
